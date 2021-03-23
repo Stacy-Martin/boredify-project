@@ -1,6 +1,25 @@
+* {
+    box-sizing: unset;
+}
+
 :root {
     background-image: url(../images/backgroundpatch2.jpg);
     background-repeat: repeat;
+}
+
+html,
+body {
+    height: 100%;
+    position: relative;
+    display: block;
+}
+
+
+.main-container {
+    min-height: 80%;
+    overflow: hidden;
+    display: block;
+    margin-bottom: 5rem;
 }
 
 /* hero header */
@@ -14,20 +33,19 @@
     color: #E5D3B3;
     text-align: right;
     margin-bottom: 0px;
+    margin-top: 3rem;
 }
 .hero {
     text-align: center;
-    height: 420px;
+    height: 23rem;
     font-family: badtyp, sans-serif;
     text-shadow: 3px 3px black;
     background-image: url('../images/meltingClockExpanded.jpg');
     background-position: center;
 }
 
-/* favorites sidebar */
 h3 {
     font-size: 2rem;
-    margin-bottom: 1rem;
     font-family: chauncy-pro;
     font-weight: 400;
     font-style: normal;
@@ -36,57 +54,54 @@ h3 {
     margin-left: 2rem;
 }
 
-/* API activity descriptions */
 p {
     align-self: center;
-    margin-bottom: .5rem;
-    padding: 15px;
-    vertical-align:auto;
-    /* color: #E5D3B3;
-    display: flex;
-    justify-content: center; */
-    align-items: center;
+    justify-content: center;
+    width: 100%; 
+    font-size: 1.25rem;
 }
 
-/* favorites content */
 .section {
     padding-top: none;
     margin: none;
     text-align: center;
     justify-items: center;
     display: block;
+    width: 100%;
 }
 
 .apiBody {
     font-family: chauncy-pro;
     font-weight: 400;
     font-style: normal;
-    text-align: left;
+    text-align: center;
     color: #E5D3B3;
     font-size: 24pt;
     padding-bottom: 0px;
-    /* display: flex; */
     justify-content: center;
     align-items: center;
+    display: block;
+}
+
+.apiBody > button {
+    margin: 3rem!important;
 }
 
 #funnyImage {
-    max-height: 280px;
+    max-height: 500px;
     width: auto;
 }
 
 #user-input {
-        /* display: flex; */
-        justify-content: center;
-        align-items: center;
+    justify-content: center;
+    align-items: center;
 }
 
 .clock-button{
     max-height: 70px;
     margin-bottom: .5rem;
-    display: block;
+    display: flex;
     padding: 0;
-    float: left;
 }
 
 .clock-button:hover {
@@ -98,16 +113,28 @@ p {
 
 .button.is-info {
     background-color: #661c00;
-    /* display: flex; */
-    justify-content: center;
-    align-items: center;
+    justify-self: center;
+    align-self: center;
     font-size: 12pt;
     margin: 10pt;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.image > img {
+    max-width: 300px!important;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 #cat-meme {
     max-height: 200px;
     margin-top: 10pt;
+}
+
+.field > p {
+    width: auto;
+    display: block;
 }
 
 #bored-meme {
@@ -126,13 +153,9 @@ p {
     max-height: 1.25rem;
 }
 
-.footer {
-    padding: 10px;
+.custom-footer {
+    padding: 10px 0px!important;
     font-family: 'Orbitron', sans-serif;
-    margin-top: auto;
-    margin-bottom: 0px;
-    bottom: 0;
-    left: 0;
     width: 100%;
     display: block;
     background-color: black;
@@ -140,7 +163,29 @@ p {
     border-top-color: gray;
 }
 
+.footer-custom-inner{
+    bottom: 0;
+    margin-right: 4rem;
+    padding: 0;
+}
+
 .footer-title {
+    text-align: center;
+    margin-left: auto;
+    margin-right:auto;
+}
+
+.link-text{
+    align-self: flex-start;
+    margin-block-start: 0!important;
+    margin-inline-start: 0;
+    padding: 0;
+    justify-self: left;
     text-align: left;
-    margin-left: 50px;
+}
+
+#favoriteList {
+    color: #E5D3B3;
+    font-size: 18px;
+    font-family: chauncy-pro;
 }
